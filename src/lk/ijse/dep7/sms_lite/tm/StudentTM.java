@@ -1,17 +1,23 @@
 package lk.ijse.dep7.sms_lite.tm;
 
-public class Student {
+import javafx.scene.control.Button;
+
+public class StudentTM {
     private String id;
     private String name;
-    private String phone;
+    private Button btnDelete;
 
-    public Student() {
+    public StudentTM() {
     }
 
-    public Student(String id, String name, String phone) {
+    public StudentTM(String id, String name) {
         this.id = id;
         this.name = name;
-        this.phone = phone;
+    }
+    public StudentTM(String id, String name, Button btnDelete) {
+        this.id = id;
+        this.name = name;
+        this.btnDelete = btnDelete;
     }
 
     public String getId() {
@@ -30,20 +36,20 @@ public class Student {
         this.name = name;
     }
 
-    public String getPhone() {
-        return phone;
+    public Button getBtnDelete() {
+        return btnDelete;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setBtnDelete(Button btnDelete) {
+        this.btnDelete = btnDelete;
     }
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "StudentTM{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
+                ", btnDelete=" + btnDelete +
                 '}';
     }
 }
