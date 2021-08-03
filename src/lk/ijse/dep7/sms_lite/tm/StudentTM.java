@@ -1,11 +1,11 @@
 package lk.ijse.dep7.sms_lite.tm;
 
-import javafx.scene.control.Button;
+import java.io.Serializable;
 
-public class StudentTM {
+public class StudentTM implements Serializable {
     private String id;
     private String name;
-    private Button btnDelete;
+
 
     public StudentTM() {
     }
@@ -13,11 +13,6 @@ public class StudentTM {
     public StudentTM(String id, String name) {
         this.id = id;
         this.name = name;
-    }
-    public StudentTM(String id, String name, Button btnDelete) {
-        this.id = id;
-        this.name = name;
-        this.btnDelete = btnDelete;
     }
 
     public String getId() {
@@ -36,20 +31,11 @@ public class StudentTM {
         this.name = name;
     }
 
-    public Button getBtnDelete() {
-        return btnDelete;
-    }
-
-    public void setBtnDelete(Button btnDelete) {
-        this.btnDelete = btnDelete;
-    }
-
     @Override
     public String toString() {
         return "StudentTM{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
-                ", btnDelete=" + btnDelete +
                 '}';
     }
 }

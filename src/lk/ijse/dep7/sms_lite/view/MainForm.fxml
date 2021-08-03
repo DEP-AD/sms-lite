@@ -1,29 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="552.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep7.sms_lite.controller.MainFormController">
+<AnchorPane prefHeight="578.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep7.sms_lite.controller.MainFormController">
    <children>
-      <TextField fx:id="txtID" layoutX="36.0" layoutY="27.0" prefHeight="26.0" prefWidth="437.0" promptText="ID" />
-      <TextField fx:id="txtName" layoutX="36.0" layoutY="69.0" prefHeight="26.0" prefWidth="437.0" promptText="Name" />
-      <TextField fx:id="txtPhone" layoutX="36.0" layoutY="109.0" prefHeight="26.0" prefWidth="437.0" promptText="Phone" />
-      <ListView fx:id="lstPhone" layoutX="36.0" layoutY="151.0" prefHeight="125.0" prefWidth="200.0" />
+      <TextField fx:id="txtID" layoutX="140.0" layoutY="57.0" prefHeight="26.0" prefWidth="333.0" promptText="Enter student ID here" />
+      <TextField fx:id="txtName" layoutX="140.0" layoutY="99.0" prefHeight="26.0" prefWidth="333.0" promptText="Enter student name here " />
+      <TextField fx:id="txtContact" layoutX="140.0" layoutY="139.0" prefHeight="26.0" prefWidth="333.0" promptText="Enter a contact number and press enter button" />
+      <ListView fx:id="lstPhone" layoutX="36.0" layoutY="181.0" prefHeight="125.0" prefWidth="200.0" />
 
-      <Button fx:id="btnClear" layoutX="255.0" layoutY="151.0" mnemonicParsing="false" onAction="#btnClear_OnAction" prefHeight="26.0" prefWidth="105.0" text="Clear" />
-      <Button fx:id="btnRemove" layoutX="255.0" layoutY="193.0" mnemonicParsing="false" onAction="#btnRemove_OnAction" prefHeight="26.0" prefWidth="105.0" text="Remove" />
-      <Button fx:id="btnSave" layoutX="36.0" layoutY="287.0" mnemonicParsing="false" onAction="#btnSave_OnAction" prefHeight="26.0" prefWidth="437.0" text="Save" />
-       <TableView fx:id="tblStudent" layoutX="36.0" layoutY="323.0" prefHeight="200.0" prefWidth="437.0">
+      <Button fx:id="btnNew" layoutX="368.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnNew_OnAction" prefHeight="26.0" prefWidth="105.0" text="+ New" />
+      <Button fx:id="btnRemove" layoutX="254.0" layoutY="181.0" mnemonicParsing="false" onAction="#btnRemove_OnAction" prefHeight="26.0" prefWidth="105.0" text="Remove" />
+      <Button fx:id="btnSave" layoutX="36.0" layoutY="317.0" mnemonicParsing="false" onAction="#btnSave_OnAction" prefHeight="26.0" prefWidth="437.0" text="Save" />
+       <TableView fx:id="tblStudent" layoutX="36.0" layoutY="361.0" prefHeight="192.0" prefWidth="437.0">
            <columns>
                <TableColumn prefWidth="126.0" text="ID" />
                <TableColumn prefWidth="201.0" text="Name" />
                <TableColumn prefWidth="97.0" text="Delete" />
            </columns>
        </TableView>
+      <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="36.0" layoutY="62.0" prefHeight="18.0" prefWidth="92.0" text="Student ID :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="36.0" layoutY="104.0" prefHeight="18.0" prefWidth="92.0" text="Name :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="36.0" layoutY="144.0" text="Contact No. :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="15.0" layoutY="352.0" prefHeight="3.0" prefWidth="480.0" />
    </children>
 </AnchorPane>
